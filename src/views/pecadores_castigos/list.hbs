@@ -1,0 +1,45 @@
+<div class="mhead1 mx-auto">
+    <div class="row">
+    <div class="col-sm-9">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Castigos asignados</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Pecador</th>
+                    <th scope="col">Castigo</th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>                
+                {{#each pecadores_castigos}}
+                <tr>
+                    <th>{{NombrePecador}}</th>
+                    <td>{{NombreCastigo}}</td> 
+                    <td>
+                        <a href="/pecadores_castigos/delete/{{idPecador_Castigo}}" class="btn btn-outline-info">Eliminar</a>
+                    </td>  
+
+                </tr>
+                {{else}}
+                    <p>No hay castigos asignados</p>                
+                {{/each}}
+                </tbody>
+
+            </table>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+            <div class="card">
+        <img src="/img/wat.gif" class="card-img-top" alt="hola">
+        <div class="card-body">
+        <h5 class="card-title">Asigna un nuevo castigo</h5>
+        <a href="/pecadores_castigos/add" class="btn btn-info btn-block">Asignar</a>
+        <h5 class="card-title">Ve los datos de los pecadores</h5>
+        <a href="/pecadores" class="btn btn-info btn-block">Ir</a>
+    </div>
+    </div>
+    </div>
+</div>

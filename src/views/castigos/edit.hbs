@@ -1,0 +1,25 @@
+<div class="carta_de_agregar mx-auto">
+                <div class="card  border-info">
+                <div class="mhead1 mx-auto">
+                    <img src="/img/hog.gif" class="card-img-top" style="width: 25rem;" alt="hola">
+                    <h5>
+                       Edita un castigo 
+                    </h5>
+                </div>
+                <div class="card-body text-info ">
+                    <form action="/castigos/edit/{{castigo.idCastigo}}" method="POST">
+                        <div class="form">
+                            <div class="form-group">
+                                <p>Nombre<input type="text" value="{{castigo.Nombre}}" class="form-control" name='Nombre' placeholder="Nombre" autofocus></p>
+                            </div>
+                            <div class="form-group">
+                                <p>Descripcion<input type="text" value="{{castigo.Descripcion}}" class="form-control" name='Descripcion' placeholder="Descripcion" autofocus></p>
+                            </div>
+                                <button class="btn btn-secondary">
+                                    Confirmar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>

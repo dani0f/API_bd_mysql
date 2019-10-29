@@ -1,0 +1,61 @@
+body {
+    background: url(/img/imagen4.jpg);
+    background-size: cover;
+    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow:scroll;
+    overflow-x:hidden
+
+}
+.principal{
+    background-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-size: cover;
+    position: relative;
+    flex-flow: row;
+    width: 100%;
+    height:41rem;
+}
+.tarjetas{
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    font-size: 1rem;;
+    padding-left: 13rem;
+}
+.mhead p{
+    font-size: 2rem;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.mhead1 {
+
+    width: 90%;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 1rem;
+}
+.mhead1 h5{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: steelblue;
+    font-size: 7mm;
+}
+.mhead2 {
+    width: 60%;
+    color: blue;
+    padding-top: 1rem;
+}
+.mhead2 h5{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: firebrick;
+}
+.carta_de_agregar {
+    padding-top: 1rem;
+    width: 40%;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}

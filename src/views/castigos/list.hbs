@@ -1,0 +1,43 @@
+<div class="mhead1 mx-auto">
+    <div class="row">
+    <div class="col-sm-9">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Listado de castigos</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>                
+                {{#each castigos}}
+                <tr>
+                    <th>{{Nombre}}</th>
+                    <td>{{Descripcion}}</td> 
+                    <td><a href="/castigos/edit/{{idCastigo}}" class="btn btn-outline-info">Editar</a>
+                        <a href="/castigos/delete/{{idCastigo}}" class="btn btn-outline-info">Eliminar</a>
+                    </td>  
+
+                </tr>
+                {{else}}
+                    <p>No hay castigos registrados</p>                
+                {{/each}}
+                </tbody>
+
+            </table>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+            <div class="card">
+        <img src="/img/hog.gif" class="card-img-top" alt="hola">
+        <div class="card-body">
+        <h5 class="card-title">Agregar nuevo castigo</h5>
+        <a href="/castigos/add" class="btn btn-secondary btn-block">Agregar</a>
+    </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>INFIERNO MUJAJA</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/styles.css">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">INFIERNO </a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+   
+     <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav mr-auto">        
+         <li class="nav-item">
+           <a class="nav-link" href="/moderar">Moderar</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/filtrado">Filtrar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/moderar/asig">Asignar</a>
+          </li>
+       </ul>
+     </div>
+    </div>
+   </nav>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+   crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+   crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+   crossorigin="anonymous"></script>
+<div class="mhead1 mx-auto">
+    <div class="row">
+    <div class="col-sm-2">
+        <div class="card mx-auto">
+        <div class="card-body">
+            <h5 class="card-title">Filtros para pecadores</h5><p></p><span class="badge badge-pill badge-light">Resultados: <%=filtros.length%></span>
+            <form action="/filtrado" method="POST">
+            <div class="form">
+            <div class="input-group mb-1">
+                        <input type="button" class="btn btn-block btn-warning collapsed" data-toggle="collapse" data-target="#uno" value="Pecados">
+                        <div id="uno" class="collapse">
+                                <input type='hidden' name='pecado' value="">
+                                <%var x=0%>                             
+                                <% for(var i=0; i<elementos.length ; i++) {%>
+                                        <% if(elementos[i].NombreTabla=="pecados"){ %>                                                             
+                                            <div class="form-check form-check-inline">
+                                            <label><input class="form-check-input" type="checkbox" name="pecado" value=<%=elementos[i].id%>><%= elementos[i].Nombre %></label><br>                                 
+                                        </div>
+                                        <%x++%>
+                                        <% } %>
+                                <% } %>                               
+                    </div>
+                    <br>
+            </div>
+                    <div class="input-group mb-1">
+                    <input type="button" class="btn btn-block btn-warning collapsed" data-toggle="collapse" data-target="#dos" value="Muertes">
+                        <div id="dos" class="collapse">
+                            <input type='hidden' name='muerte' value="">
+                                <% for(var i=0; i<elementos.length ; i++) {%>
+                                        <% if(elementos[i].NombreTabla=="muertes"){ %>
+                                            <div class="form-check form-check-inline">
+                                            <label><input class="form-check-input" type="checkbox" name="muerte" value=<%=elementos[i].id%>><%= elementos[i].Nombre %></label><br>                             
+                                        </div>
+                                        <% } %>
+                                <% } %>
+                    </div>
+                  </div>
+                    <div class="input-group mb-1">
+                    <input type="button" class="btn btn-block btn-warning collapsed" data-toggle="collapse" data-target="#tres" value="Paises">
+                        <div id="tres" class="collapse">
+                              <input type='hidden' name='pais' value="">
+                                <% for(var i=0; i<elementos.length ; i++) {%>
+                                        <% if(elementos[i].NombreTabla=="paises"){ %>
+                                            <div class="form-check form-check-inline">
+                                            <label><input class="form-check-input" type="checkbox" name="pais" value=<%=elementos[i].id%>><%= elementos[i].Nombre %></label><br>                             
+                                        </div>
+                                        <% } %>
+                                <% } %>
+                        </div>
+                    </div>
+                    <div class="container pt-2">
+                    <button class="btn btn-secondary btn-block">
+                            Filtrar
+                    </button>
+            </div>
+            </div>
+            </div>
+            </form>
+            </div>
+        </div> 
+        <div class="col-sm-9 ">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr class="bg-light" style="width:100%">
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Edad</th>
+                            <th scope="col">Biografia</th>
+                            <th scope="col">Muerte</th>
+                            <th scope="col">Pecado</th>
+                            <th scope="col">Pais</th>
+                            <th scope="col">Fecha de muerte</th>
+                            <th scope="col">Fecha de nacimiento</th>
+                            <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>                
+                        <% for(var f=0; f<filtros.length ; f++) {%>    
+                        <tr>
+                            <th scope="row"><%=f+1%></th>
+                            <td><%=filtros[f].Nombre %></td>
+                            <td><%= filtros[f].Edad %></td>
+                            <td><%= filtros[f].Biografia %></td> 
+                            <td><%= filtros[f].Muerte%></td> 
+                            <td><%= filtros[f].Pecado%></td>
+                            <td><%= filtros[f].Pais%></td>                    
+                            <td><%= filtros[f].Fecha_de_muerte%></td>
+                            <td><%= filtros[f].Fecha_de_nacimiento %></td>
+                            
+                          <% } %>
+                        
+                        </tr>
+                        </tbody>                        
+                    </table>
+                </div>
+                </div>
+        </div>           
+        </div>
+        </div>
+        </div>
+        </html>

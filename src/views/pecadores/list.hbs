@@ -1,0 +1,55 @@
+<div class="mhead1 mx-auto">
+    <div class="row">
+    <div class="col-sm-9">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Listado de pecadores</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Biografia</th>
+                    <th scope="col">Muerte</th>
+                    <th scope="col">Pecado</th>
+                    <th scope="col">Pais</th>
+                    <th scope="col">Fecha de muerte</th>
+                    <th scope="col">Fecha de nacimiento</th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>                
+                {{#each pecadores}}
+                <tr>
+                    <th scope="row">{{Nombre}}</th>
+                    <td>{{Edad}}</td>
+                    <td>{{Biografia}}</td> 
+                    <td>{{Muerte}}</td> 
+                    <td>{{Pecado}}</td>
+                    <td>{{Pais}}</td>                    
+                    <td>{{Fecha_de_nacimiento}}</td>
+                    <td>{{Fecha_de_muerte}}</td>
+                    <td><a href="/pecadores/edit/{{idPecador}}" class="btn btn-secondary btn-block">Editar</a>
+                        <a href="/pecadores/delete/{{idPecador}}" class="btn btn-warning btn-block">Eliminar</a>
+                    </td>  
+
+                </tr>
+                {{else}}
+                    <p>No hay pecadores registrados</p>                
+                {{/each}}
+                </tbody>
+
+            </table>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+            <div class="card">
+        <img src="/img/icono.png" class="card-img-top" alt="hola">
+        <div class="card-body">
+        <h5 class="card-title">Agregar nuevo pecador</h5>
+        <a href="/pecadores/add" class="btn btn-secondary btn-block">Agregar</a>
+    </div>
+    </div>
+    </div>
+</div>

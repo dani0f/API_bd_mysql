@@ -1,0 +1,44 @@
+<div class="mhead1 mx-auto">
+    <div class="row">
+    <div class="col-sm-9">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Listado de herramientas</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>                
+                {{#each herramientas}}
+                <tr>
+                    <th>{{Nombre}}</th>
+                    <td>{{Tipo}}</td> 
+                    <td>
+                        <a href="/herramientas/edit/{{idHerramienta}}" class="btn btn-outline-info">Editar</a>
+                        <a href="/herramientas/delete/{{idHerramienta}}" class="btn btn-outline-info">Eliminar</a>
+                    </td>  
+
+                </tr>
+                {{else}}
+                    <p>No hay Herramientas registradas</p>                
+                {{/each}}
+                </tbody>
+
+            </table>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+            <div class="card">
+        <img src="/img/espada.jpg" class="card-img-top" alt="hola">
+        <div class="card-body">
+        <h5 class="card-title">Agregar nueva herramienta</h5>
+        <a href="/herramientas/add" class="btn btn-secondary btn-block">Agregar</a>
+    </div>
+    </div>
+    </div>
+</div>

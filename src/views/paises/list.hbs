@@ -1,0 +1,42 @@
+<div class="mhead1 mx-auto">
+    <div class="row">
+    <div class="col-sm-8 mx-auto">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Listado de Paises</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>                
+                {{#each paises}}
+                <tr>
+                    <th>{{Nombre}}</th>
+                    <td>
+                        <a href="/paises/edit/{{idPais}}" class="btn btn-outline-info">Editar</a>
+                        <a href="/paises/delete/{{idPais}}" class="btn btn-outline-info">Eliminar</a>
+                    </td>  
+
+                </tr>
+                {{else}}
+                    <p>No hay paises registradas</p>                
+                {{/each}}
+                </tbody>
+
+            </table>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+            <div class="card mx-auto">
+        <img src="/img/planeta.gif" class="card-img-top" alt="hola">
+        <div class="card-body">
+        <h5 class="card-title">Agregar un nuevo pais</h5>
+        <a href="/paises/add" class="btn btn-secondary btn-block">Agregar</a>
+    </div>
+    </div>
+    </div>
+</div>

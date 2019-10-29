@@ -1,0 +1,24 @@
+<div class="carta_de_agregar mx-auto">
+                <div class="card  border-info">
+                <div class="mhead1 mx-auto">
+                    <h5>
+                       Edita un piso
+                    </h5>
+                </div>
+                <div class="card-body text-info ">
+                    <form action="/pisos/edit/{{pisos.idPiso}}" method="POST">
+                        <div class="form">
+                            <div class="form-group">
+                                <p>Nombre<input type="text" value="{{pisos.Nombre}}" class="form-control" name='Nombre' placeholder="Nombre" autofocus></p>
+                            </div>
+                            <div class="form-group">
+                                <p>Descripcion<input type="text" value="{{pisos.Descripcion}}" class="form-control" name='Descripcion' placeholder="Descripcion" autofocus></p>
+                            </div>
+                                <button class="btn btn-secondary btn-block">
+                                    Actualizar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>

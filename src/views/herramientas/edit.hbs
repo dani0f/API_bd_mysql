@@ -1,0 +1,25 @@
+<div class="carta_de_agregar mx-auto">
+                <div class="card  border-info">
+                <div class="mhead1 mx-auto">
+                    <img src="/img/espada.jpg" class="card-img-top" style="width: 10rem;" alt="hola">
+                    <h5>
+                       Edita una herramienta 
+                    </h5>
+                </div>
+                <div class="card-body text-info ">
+                    <form action="/herramientas/edit/{{herramientas.idHerramienta}}" method="POST">
+                        <div class="form">
+                            <div class="form-group">
+                                <p>Nombre<input type="text" value="{{herramientas.Nombre}}" class="form-control" name='Nombre' placeholder="Nombre" autofocus></p>
+                            </div>
+                            <div class="form-group">
+                                <p>Tipo<input type="text" value="{{herramientas.Tipo}}" class="form-control" name="Tipo" placeholder=""></p>
+                            </div>
+                                <button class="btn btn-secondary">
+                                    Actualizar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>

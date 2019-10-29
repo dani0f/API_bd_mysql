@@ -1,0 +1,23 @@
+<div class="carta_de_agregar mx-auto" style="width: 25rem;">
+                <div class="card  border-info">
+                <div class="mhead1 mx-auto">
+                    <img src="/img/planeta.gif" class="card-img-top" style="width: 15rem;" alt="hola">
+                    <br>
+                    <h5>
+                       Edita un pais
+                    </h5>
+                </div>
+                <div class="card-body text-info ">
+                    <form action="/paises/edit/{{paises.idPais}}" method="POST">
+                        <div class="form">
+                            <div class="form-group">
+                                <p>Nombre<input type="text" value="{{paises.Nombre}}" class="form-control" name='Nombre' placeholder="Nombre" autofocus></p>
+                            </div>
+                                <button class="btn btn-secondary btn-block">
+                                    Actualizar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>

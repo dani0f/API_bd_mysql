@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>INFIERNO MUJAJA</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/styles.css">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/">INFIERNO </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+       
+         <div class="collapse navbar-collapse" id="navbarNav">
+           <ul class="navbar-nav mr-auto">        
+             <li class="nav-item">
+               <a class="nav-link" href="/moderar">Moderar</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="/filtrado">Filtrar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/moderar/asig">Asignar</a>
+              </li>
+           </ul>
+         </div>
+        </div>
+       </nav>
+<div class="container pb-3 pt-2">
+<div class="card mx-auto" style="width: 25rem;">
+        <img src="/img/boo.gif" class="card-img-top" style="width: 18rem;" alt="hola">
+    <div class="card-body">
+      <h5 class="card-title text-danger">Asigna una herramienta</h5>
+      <form action="/castigos_herramientas/add" method="POST">
+        <div class="form">
+        <label>Castigo</label>
+        <select class="form-control form-control-mr-sm-2" name="Castigos_idCastigo">
+                <% for(var i=0; i<elementos.length ; i++) {%>
+                   <% if(elementos[i].NombreTabla=="castigos"){ %>
+                       <h1><%= elementos[i].Nombre %></h1>
+                           <option value=<%=elementos[i].id%>><%= elementos[i].Nombre %></option>                        
+                     <% } %>
+                   <% } %>
+            </select>
+            <label>Herramientas</label>
+            <select class="form-control form-control-mr-sm-2" name="Herramientas_idHerramienta">
+                <% for(var i=0; i<elementos.length ; i++) {%>
+                   <% if(elementos[i].NombreTabla=="herramientas"){ %>
+                       <h1><%= elementos[i].Nombre %></h1>
+                           <option value=<%=elementos[i].id%>><%= elementos[i].Nombre %></option>                        
+                     <% } %>
+                   <% } %>
+            </select>
+            <div class="container pb-2 pt-4">
+                    <button class="btn btn-success btn-block">
+                        Confirmar
+                    </button>
+                </div>
+    </div>
+    </form>
+    </div>
+  </div>
+</div>
+</html>

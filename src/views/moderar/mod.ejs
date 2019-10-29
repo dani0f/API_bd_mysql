@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>INFIERNO MUJAJA</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/styles.css">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">INFIERNO </a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+   
+     <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav mr-auto">        
+         <li class="nav-item">
+           <a class="nav-link" href="/moderar">Moderar</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/filtrado">Filtrar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/moderar/asig">Asignar</a>
+          </li>
+       </ul>
+     </div>
+    </div>
+   </nav>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+   crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+   crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+   crossorigin="anonymous"></script>
+<div class="container-p4">
+    <div class="mhead2 mx-auto" class="list-group">
+            <span class="badge badge-pill badge-dark">Cantidad de elementos actuales: <%=elementos[0].Contador+elementos[1].Contador+elementos[2].Contador+elementos[3].Contador+elementos[4].Contador+elementos[5].Contador+elementos[6].Contador+elementos[7].Contador+elementos[8].Contador%> </span>
+        <a href="/pisos" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><span class="badge badge-pill badge-info"><%=elementos[5].Contador%></span> Pisos</h5>
+                </div>
+                <p class="mb-1">el infierno se divide en pisos divididos por nivel de pecado </p>
+        </a>
+        <a href="/pecadores" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><span class="badge badge-pill badge-info"><%=elementos[0].Contador%></span> Pecadores</h5>
+                </div>
+                <p class="mb-1">Personas que realizaron uno o más de los pecados </p>
+                </a>
+        <a href="/pecados" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><span class="badge badge-pill badge-info"><%=elementos[1].Contador%></span> Pecados</h5>
+                </div>
+                <p class="mb-1">Define lo que esta mal </p>
+                
+        </a>
+        <a href="/demonios" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><span class="badge badge-pill badge-info"><%=elementos[2].Contador%></span> Demonios</h5>
+                </div>
+                <p class="mb-1">Especialistas en ejercer castigos especificos</p>
+                
+        </a>
+        <a href="/guardias" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><span class="badge badge-pill badge-info"><%=elementos[3].Contador%></span> Guardias</h5>
+                </div>
+                <p class="mb-1">Vigilan que todo este bajo control tienen pisos a cargo </p>
+        </a>
+        <a href="/castigos" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><span class="badge badge-pill badge-info"><%=elementos[6].Contador%></span> Castigos</h5>
+                </div>
+                <p class="mb-1">Tipos de castigos que se pueden ejercer </p>
+        </a>
+        <a href="/herramientas" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><span class="badge badge-pill badge-info"><%=elementos[4].Contador%></span> Herramientas</h5>
+                </div>
+                <p class="mb-1">Objetos ocupados para torturar  </p>
+        </a>
+        <a href="/paises" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><span class="badge badge-pill badge-info"><%=elementos[8].Contador%></span> Paises</h5>
+                </div>
+                <p class="mb-1">Lugar al que pertenecian los Pecadores </p>
+        </a>
+        <a href="/muertes" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><span class="badge badge-pill badge-info"><%=elementos[7].Contador%></span> Muertes</h5>
+                </div>
+                <p class="mb-1">Forma en la que murieron los Pecadores </p>
+        </a>        
+</div>
+</div>

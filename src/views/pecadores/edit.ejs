@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>INFIERNO MUJAJA</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/styles.css">
+<div class="container pb-3 pt-2">
+<div class="card mx-auto" style="width: 25rem;">
+    <div class="card-body">
+      <h5 class="card-title text-danger">Edita un pecador</h5>
+      <form action="/pecadores/edit/<%=pecador.idPecador%>" method="POST">
+        <div class="form">
+        <div class="form-row">
+            <div class="form-group col-md-6 my-auto">
+                <p>Nombre<input type="text" value="<%=pecador.Nombre%>" class="form-control" name="Nombre" placeholder=""></p>            
+            </div>
+            <div class="form-group col-md-2 my-auto">
+                <p>Edad<input type="int" value="<%=pecador.Edad%>" class="form-control" name="Edad" placeholder=""></p>
+            </div>
+        </div>
+        <div class="form-group my-auto">
+                <p>Fecha de nacimiento<input type="date" value="<%=pecador.Fecha_de_nacimiento%>" class="form-control" name="Fecha_de_nacimiento"></p>
+            </div>
+        <div class="form-group my-auto">
+            <p>Fecha de muerte<input type="date" value="<%=pecador.Fecha_de_muerte%>" class="form-control" name="Fecha_de_muerte"></p>
+        </div>
+        <label>Muerte</label>
+        <select class="form-control form-control-mr-sm-2" name="Muertes_idMuerte">
+                <% for(var i=0; i<elementos.length ; i++) {%>
+                   <% if(elementos[i].NombreTabla=="muertes"){ %>
+                       <h1><%= elementos[i].Nombre %></h1>
+                           <option value=<%=elementos[i].id%>><%= elementos[i].Nombre %></option>                        
+                     <% } %>
+                   <% } %>
+            </select>
+            <label >Pecado</label>
+            <select class="form-control form-control-mr-sm-2" name="Pecados_idPecado">
+                <% for(var i=0; i<elementos.length ; i++) {%>
+                    <% if(elementos[i].NombreTabla=="pecados"){ %>
+                        <h1><%= elementos[i].Nombre %></h1>
+                            <option value= <%=elementos[i].id%>><%= elementos[i].Nombre %></option>                   
+                        <% } %>
+                    <% } %>
+             </select>
+             <label >Paise</label>
+             <select class="form-control form-control-mr-sm-2" name="Paises_idPais">    
+                <% for(var i=0; i<elementos.length ; i++) {%>
+                    <% if(elementos[i].NombreTabla=="paises"){ %>
+                        <h1><%= elementos[i].Nombre %></h1>
+                      <option value=<%=elementos[i].id%>><%= elementos[i].Nombre %></option>                                       
+                        <% } %>
+                    <% } %>
+            </select>
+            <div class="form-group">
+                <p>Biografia<input type="text" value="<%=pecador.Biografia%>" class="form-control" name="Biografia" placeholder=""></p>
+            </div> 
+        <button class="btn btn-secondary btn-block">
+            Confirmar
+        </button>
+    </div>
+    </form>
+    </div>
+  </div>
+</div>
+</html>
